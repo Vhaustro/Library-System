@@ -42,7 +42,7 @@ class LMS:
             if not self.books_dict[books_id]['status'] == 'Available':
                 print(f"This book is already issued to {self.books_dict[books_id]['lender_name']} on {self.books_dict[books_id]['lend_date']}")
                 return self.lend_books()
-            elif self.books_dict[books_id]['status'] == 'Available':
+            elif self.books_dict[books_id]['status'] == 'Available':-
                 your_name = input("Enter Your Name : ")
                 self.books_dict[books_id]['lender_name'] = your_name
                 self.books_dict[books_id]['lend_date'] = current_date
@@ -61,7 +61,7 @@ def add_books(self):
         elif len(new_books) > 20:
             print("Books title length is too long !!! Title length limit is 20 characters")
             return self.add_books()
-        else:
+        else:   
             with open(self.list_of_books, "a") as b:
                 b.writelines(f"{new_books}\n")
             self.books_dict.update({str(int(max(self.books_dict))+1):{'books_title':new_books,'lender_name':'','lend_date':'', 'status':'Available'}})
@@ -82,5 +82,3 @@ def return_books(self):
                 print("Successfully Updated !!!\n")
         else:
             print("Book ID Not Found !!!")
-    
-
