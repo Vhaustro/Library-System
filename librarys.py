@@ -9,8 +9,8 @@
 
 import datetime
 import os
-#os.getcwd()
-
+os.getcwd()
+ 
 class LMS:
     " This class purpose it to keep a record of all the books (DISPLAY) "
     " It contains 4 modules of which contribute to it's complete collection "
@@ -42,34 +42,21 @@ class LMS:
             if not self.books_dict[books_id]['status'] == 'Available':
                 print(f"This book is already issued to {self.books_dict[books_id]['lender_name']} on {self.books_dict[books_id]['lend_date']}")
                 return self.lend_books()
-            elif self.books_dict[books_id]['status'] == 'Available':-
-                your_name = input("Enter Your Name : ")
-                self.books_dict[books_id]['lender_name'] = your_name
-                self.books_dict[books_id]['lend_date'] = current_date
-                self.books_dict[books_id]['status']= 'Already Issued'
-                print("Book Issued Successfully !!!\n")
-        else:
-            print("Book ID Not Found !!!")
-            return self.Issue_books()
 
-
-#Add Books section
-def add_books(self):
+    def add_books(self):
         new_books = input("Enter Books Title : ")
         if new_books == "":
             return self.add_books()
         elif len(new_books) > 20:
             print("Books title length is too long !!! Title length limit is 20 characters")
             return self.add_books()
-        else:   
+        else:
             with open(self.list_of_books, "a") as b:
                 b.writelines(f"{new_books}\n")
             self.books_dict.update({str(int(max(self.books_dict))+1):{'books_title':new_books,'lender_name':'','lend_date':'', 'status':'Available'}})
             print(f"The books '{new_books}' has been added successfully !!!")
 
-
-#Return Books
-def return_books(self):
+    def return_books(self):
         books_id = input("Enter Books ID : ")
         if books_id in self.books_dict.keys():
             if self.books_dict[books_id]['status'] == 'Available':
@@ -82,3 +69,5 @@ def return_books(self):
                 print("Successfully Updated !!!\n")
         else:
             print("Book ID Not Found !!!")
+
+
