@@ -24,7 +24,7 @@ print(now.strftime("%m %d %y %H:%M:%S: %p"))
 if (now.strftime("%p")) == "AM":
      print("Good morning!")
 else:
-     print("Good evening!")
+     print("Good afternoon!")
 
 gender = "Male"
 gender = "Female"
@@ -42,55 +42,55 @@ print(input)
 
 
 
-class Library:
-    def __init__(self, listofbooks):
-     self.availablebooks=listofbooks
+#class Library:
+    #def __init__(self, listofbooks):
+     #self.availablebooks=listofbooks
     
-    def displayavailablebooks(self):
-        print("The books we have in our library are:")
-        for book in self.availablebooks:
-            print(book)
+    #def displayavailablebooks(self):
+        #print("The books we have in our library are:")
+        #for book in self.availablebooks:
+            #print(book)
     
-    def lendbook(self,requestedbook):
-        if requestedbook in self.availablebooks:
-            print("Hazzaaaah!! You have successfully borrowed it")
-        else:
-            print("Ooopsiees!! This book is not in our inventory")
+    #def lendbook(self,requestedbook):
+        #if requestedbook in self.availablebooks:
+            #print("Hazzaaaah!! You have successfully borrowed it")
+        #else:
+            #print("Ooopsiees!! This book is not in our inventory")
 
 
-class Student:
-    def requestbook(self):
-        print("Kindly enter the name of the book you would love to check out.")
-        self.book = input ()
-        return self.book
+#class Student:
+    #def requestbook(self):
+        #print("Kindly enter the name of the book you would love to check out.")
+        #self.book = input ()
+        #return self.book
         
-    def returnbook (self):
-        print("Enter the name of the book you would love to return")
-        self.book = input ()
-        return self.book
+    #def returnbook (self):
+        #print("Enter the name of the book you would love to return")
+        #self.book = input ()
+        #return self.book
 
-def main():
-    library= Library(["Percy Jackson and the King of the Seas" "Purple Hibiscus" "Lucas Yates: Become the Viper" "Attack on Titan: The Tale of Eren Yeager"])
+#def main():
+    #library= Library(["Percy Jackson and the King of the Seas" "Purple Hibiscus" "Lucas Yates: Become the Viper" "Attack on Titan: The Tale of Eren Yeager"])
 
-    student= Student()
+    #student= Student()
 
-    done= False
-    while done == False:
-        print("""~~~~~Library Inventory~~~~~
-        1. View all books in our Inventory
-        2. Request a book
-        3. Return a book
-        4. Exit""")
+    #done= False
+    #while done == False:
+        #print("""~~~~~Library Inventory~~~~~
+        #1. View all books in our Inventory
+        #2. Request a book
+        #3. Return a book
+        #4. Exit""")
 
-        choice=int(input("Enter Choice"))
-        if choice==1:
-            library.displayavailablebooks()
-        elif choice==2:
-            library.lendbook(student.requestbook())
-        elif choice==3:
-            library.addbook(student.returnbook())
-        elif choice==4:
-            SystemExit.exit()
+        #choice=int(input("Enter Choice"))
+        #if choice==1:
+            #library.displayavailablebooks()
+        #elif choice==2:
+            #library.lendbook(student.requestbook())
+        #elif choice==3:
+            #library.addbook(student.returnbook())
+        #elif choice==4:
+            #SystemExit.exit()
 
-main()
+#main()
 
