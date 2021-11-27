@@ -19,26 +19,57 @@ import datetime
 from typing import MutableMapping
 now = datetime.datetime.now()
 print("Currently it's:")
-print(now.strftime("%m %d %y %H:%M:%S: %p"))
+print(now.strftime("%m %d %y" " %H:%M: %p"))
 
-if (now.strftime("%p")) == "AM":
+
+#Insert all times of day
+if (now.strftime("%p") == "AM"):
      print("Good morning!")
-else:
+#Fix the time according to (Morning, Afternoon,)
+elif (now.strftime("%p") == "PM"):
      print("Good afternoon!")
+else:
+    print ("Good Evening")
 
+#Add more genders
 gender = "Male"
 gender = "Female"
-
-print ("Doing well too \n")
-position = input("Are you an Admin or Student")
+gender = "Intersex"
 
 
-if position == "Administrator":
-    print ("Welcome Admin")
+#Asks for name (before figuring if admin or student)
+name = input("What is your name?")
+
+
+print ("What gender are you")
+gender = input()
+
+if (gender == "Male"):
+    print("Hey Mr. " + str(name) + ", welcome back")
+elif (gender == "Female"):
+    print ("Hi Mrs. " + str(name) + ", welcome back")
+elif (gender == "Intersex"):
+    print ("Hey," + str(name) + ", welcome back")
 else:
-    print ("Welcome Student")
+    print ("Sorry, Kindly Try Again" + str(name))
 
-print(input)
+
+
+#Proceed on keeping the gender plus the name
+
+position = input("So" + str(name) + ", are you an Admin or Student?")
+position = input()
+
+if (position == "Administrator"):
+    print ("Welcome back Admin")
+elif (position == "Student"):
+    print ("Welcome Student")
+else:
+    print ("OOopsies, you are Not part of our system. Kindly checkback later")
+
+
+
+
 
 
 
