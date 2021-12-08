@@ -20,7 +20,7 @@ from typing import MutableMapping
 now = datetime.datetime.now()
 print("Currently it's:")
 print(now.strftime("%m %d %y" " %H:%M: %p"))
-
+#Remove date and automatically include time of day
 
 #Insert all times of day
 if (now.strftime("%p") == "AM"):
@@ -39,6 +39,8 @@ gender = "Intersex"
 
 #Asks for name (before figuring if admin or student)
 name = input("What is your name?")
+
+#
 
 
 print ("What gender are you")
@@ -109,7 +111,7 @@ else:
     #while done == False:
         #print("""~~~~~Library Inventory~~~~~
         #1. View all books in our Inventory
-        #2. Request a book
+        #2. Request a book  
         #3. Return a book
         #4. Exit""")
 
