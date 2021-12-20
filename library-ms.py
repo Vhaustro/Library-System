@@ -40,17 +40,26 @@ gender = "Intersex"
 #Asks for name (before figuring if admin or student)
 name = input("What is your name?")
 
-#
-
 
 print ("What gender are you")
 gender = input()
 
-if (gender == "Male"):
+print(""" a. Male
+        b . Female  
+        c. Intersex""")
+
+
+a = "Male"
+b = "Female"
+c = "Intersex"
+
+
+
+if (gender == "Male" or a):
     print("Hey Mr. " + str(name) + ", welcome back")
-elif (gender == "Female"):
+elif (gender == "Female" or b):
     print ("Hi Mrs. " + str(name) + ", welcome back")
-elif (gender == "Intersex"):
+elif (gender == "Intersex" or c):
     print ("Hey," + str(name) + ", welcome back")
 else:
     print ("Sorry, Kindly Try Again" + str(name))
@@ -62,9 +71,13 @@ else:
 position = input("So" + str(name) + ", are you an Admin or Student?")
 position = input()
 
-if (position == "Administrator"):
+role1 = "Adminitrator"
+role2 = "Student"
+
+
+if (position == "Administrator" or role1):
     print ("Welcome back Admin")
-elif (position == "Student"):
+elif (position == "Student" or role2):
     print ("Welcome Student")
 else:
     print ("OOopsies, you are Not part of our system. Kindly checkback later")
