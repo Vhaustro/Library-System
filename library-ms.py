@@ -19,68 +19,73 @@ import datetime
 from typing import MutableMapping
 now = datetime.datetime.now()
 print("Currently it's:")
-print(now.strftime("%m %d %y" " %H:%M: %p"))
+print(now.strftime(" %H:%M: %p"))
 #Remove date and automatically include time of day
 
-#Insert all times of day
 if (now.strftime("%p") == "AM"):
-     print("Good morning!")
-#Fix the time according to (Morning, Afternoon,)
+     print("Good Morning!")
 elif (now.strftime("%p") == "PM"):
-     print("Good afternoon!")
+     print("Good Afternoon!")
 else:
     print ("Good Evening")
 
-#Add more genders
-gender = "Male"
-gender = "Female"
-gender = "Intersex"
-
-
 #Asks for name (before figuring if admin or student)
-name = input("What is your name?")
+name = input ("What is your name?" + str(v = input("> "))
+try:
+    _ = int(v)
+except:
+    pass
+else:
+    raise ValueError("input supplied should be of type 'str'"))
+
+#Accept text/reject numbers
+#No input of undefined names, print statement to direct this message to them.
+v = input("> ")
+try:
+    _ = int(v)
+except:
+    pass
+else:
+    raise ValueError("input supplied should be of type 'str'")
 
 
-print ("What gender are you")
+
+print ("Hey" + str(name) + ", " + "What gender are you?")
+
+print ("""
+Pick One:
+a: Male
+b. Female
+c. Intersex""")
+
 gender = input()
-
-print(""" a. Male
-        b . Female  
-        c. Intersex""")
-
 
 a = "Male"
 b = "Female"
 c = "Intersex"
-
-
 
 if (gender == "Male" or a):
     print("Hey Mr. " + str(name) + ", welcome back")
 elif (gender == "Female" or b):
     print ("Hi Mrs. " + str(name) + ", welcome back")
 elif (gender == "Intersex" or c):
-    print ("Hey," + str(name) + ", welcome back")
+    print ("Hello," + str(name) + ", welcome back")
 else:
     print ("Sorry, Kindly Try Again" + str(name))
 
 
 
-#Proceed on keeping the gender plus the name
-
 position = input("So" + str(name) + ", are you an Admin or Student?")
-position = input()
 
 role1 = "Adminitrator"
 role2 = "Student"
-
 
 if (position == "Administrator" or role1):
     print ("Welcome back Admin")
 elif (position == "Student" or role2):
     print ("Welcome Student")
 else:
-    print ("OOopsies, you are Not part of our system. Kindly checkback later")
+    print ("OOopsies, you are NOT part of our system. Kindly checkback later")
 
 
 
